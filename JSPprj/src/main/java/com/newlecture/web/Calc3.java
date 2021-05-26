@@ -32,6 +32,7 @@ public class Calc3 extends HttpServlet {
 				if(c.getName().equals("exp")) {
 					exp =c.getValue();
 					break;
+					pass;
 				}
 		
 		if(button !=null&& button.equals("=")) {
