@@ -72,10 +72,13 @@ public class Calc2 extends HttpServlet {
 			
 			Cookie valueCookie = new Cookie("value", String.valueOf(v));
 			Cookie btnCookie = new Cookie("btn",btn);
-			valueCookie.setPath("/");
-			btnCookie.setPath("/");
+			valueCookie.setPath("/calc2");
+			valueCookie.setMaxAge(24*60*60);
+			btnCookie.setPath("/calc2");
 			response.addCookie(valueCookie);
 			response.addCookie(btnCookie);
+			
+			response.sendRedirect("calc2.html");
 		}
 	}
 
