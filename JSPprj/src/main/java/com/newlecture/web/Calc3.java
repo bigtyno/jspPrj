@@ -45,7 +45,10 @@ public class Calc3 extends HttpServlet {
 		}
 		
 		Cookie expCookie =new Cookie("exp",exp);
+		if(button != null& button.equals("c"))
+			expCookie.setMaxAge(0);
 		
+		expCookie.setPath("/calc3");
 		response.addCookie(expCookie);
 		response.sendRedirect("calcpage");
 		
