@@ -14,6 +14,8 @@ pageContext.setAttribute("result", "hello");
 	${requestScope.result}<br>
 	${names[0]}<br>
 	${notice.title}<br>
-	${result}
+	${result}<br>
+	${param.n/2}<br>
+	${header.accept}
 </body>
 </html>
