@@ -1,4 +1,4 @@
-package com.newlecture.controller;
+package com.newlecture.web.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.newlecture.web.entity.Notice;
+
 @WebServlet("/notice/detail")
 public class NoticeDetailController extends HttpServlet {
 	@Override
@@ -28,7 +30,6 @@ public class NoticeDetailController extends HttpServlet {
 			Connection con = DriverManager.getConnection(url,"system","sys");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setInt(1, id);
-
 			ResultSet rs = st.executeQuery();
 
 			rs.next();
@@ -40,12 +41,26 @@ public class NoticeDetailController extends HttpServlet {
 			String files =rs.getString("FILES"); 
 			String content =rs.getString("CONTENT");    
 			
-			request.setAttribute("title", title);
-			request.setAttribute("regdate", regdate);
-			request.setAttribute("writerId", writerId);
-			request.setAttribute("hit", hit);
-			request.setAttribute("files", files);
-			request.setAttribute("content", content);
+			Notice notice = new Notice(
+						id,
+						title,
+						regdate,
+						writerId,
+						hit,
+						files,
+						content
+					);
+			
+			 request.setAttribute("n", notice);
+			
+			/*
+			 request.setAttribute("title", title);
+			 request.setAttribute("regdate",regdate); 
+			 request.setAttribute("writerId", writerId);
+			 request.setAttribute("hit", hit); 
+			 request.setAttribute("files", files);
+			 request.setAttribute("content", content);
+			 */
 			
 			rs.close();
 			st.close();
@@ -63,7 +78,7 @@ public class NoticeDetailController extends HttpServlet {
 		
 		
 		//forward
-		request.getRequestDispatcher("/notice/detail.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/notice/detail.jsp")
 		.forward(request, response);
 		
 	}
