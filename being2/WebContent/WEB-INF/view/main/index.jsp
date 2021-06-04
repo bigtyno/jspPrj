@@ -76,8 +76,8 @@
 								<li><a href="blog-single.html">간편상담신청</a></li>
 							</ul>
 						</li>
-						<li class="menu-active"><a href="index.html" style="padding-left: 400px;">로그인</a></li>
-						<li class="menu-active"><a href="index.html">회원가입</a></li>
+						<li class="menu-active"><a href="${pageContext.request.contextPath}/login.do" style="padding-left: 400px;">로그인</a></li>
+						<li class="menu-active"><a href="${pageContext.request.contextPath}/join.do">회원가입</a></li>
 					</ul>
 				</nav>
 				<!--######## #nav-menu-container -->
@@ -85,312 +85,245 @@
 		</div>
 		
 	</header>
-	<!--######## End Header Area ########-->
+	   <!--######## start banner Area ########-->
+   <div id = "home-banner-test">
+      <ul>
+      <li>
+      <a href="#" class="primary-btn header-btn text-capitalize mt-10">보러가기</a>
+      </li>
+      </ul>
+      <!-- 배너 스와이프 -->
+         <div id="visual">
+         <div id="mySwipe" class='swipe'>
+            <ul class="touch_banner swipe-wrap">
+               <!-- 배너 목록 -->
+               <li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/ad1.png" width="300px" height="600px" style="border-radius: 7px;"></a></li>
+               <li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/ad2.png" width="300px" height="600px" style="border-radius: 7px;"></a></li>
+               <li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/ad3.png" width="300px" height="600px" style="border-radius: 7px;"></a></li>
+            </ul>
+         </div>
+         <ul class="touch_bullet">
+            <!-- 배너 위치 표시 -->
+            <li><img src="${pageContext.request.contextPath}/resources/img/visual_bullet_on.png" width="15px" height="15px" class="active"
+               alt="" /></li>
+            <li><img src="${pageContext.request.contextPath}/resources/img/visual_bullet_off.png" width="15px" height="15px" alt="" /></li>
+            <li><img src="${pageContext.request.contextPath}/resources/img/visual_bullet_off.png" width="15px" height="15px" alt="" /></li>
+         </ul>
+         <p class="touch_left_btn">
+            <!-- 이전 버튼 -->
+            <a href="#"> <img src="${pageContext.request.contextPath}/resources/img/visual_btn_left2.png" width="40px" height="40px" alt="이전 배너" />
+            </a>
+         </p>
+         <p class="touch_right_btn">
+            <!-- 다음 버튼 -->
+            <a href="#"> <img src="${pageContext.request.contextPath}/resources/img/visual_btn_right3.png" width="40px" height="40px" alt="다음 배너" />
+            </a>
+         </p>
+      </div>
+      
+   </div>
+   
 
-	<!--######## start banner Area ########-->
-	<div id = "home-banner-test">
-		<ul>
-		<li>
-		<a href="#"><img src="${pageContext.request.contextPath}/resources/img/home-banner-bg.jpg" width="1000px" height="600px"></a>
-		</li>
-		</ul>
-		<!-- 배너 스와이프 -->
-		   <div id="visual">
-			<div id="mySwipe" class='swipe'>
-				<ul class="touch_banner swipe-wrap">
-					<!-- 배너 목록 -->
-					<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/ad1.png" width="300px" height="600px"></a></li>
-					<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/ad2.png" width="300px" height="600px"></a></li>
-					<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/ad3.png" width="300px" height="600px"></a></li>
-				</ul>
-			</div>
-			<ul class="touch_bullet">
-				<!-- 배너 위치 표시 -->
-				<li><img src="${pageContext.request.contextPath}/resources/img/visual_bullet_on.png" width="15px" height="15px" class="active"
-					alt="" /></li>
-				<li><img src="${pageContext.request.contextPath}/resources/img/visual_bullet_off.png" width="15px" height="15px" alt="" /></li>
-				<li><img src="${pageContext.request.contextPath}/resources/img/visual_bullet_off.png" width="15px" height="15px" alt="" /></li>
-			</ul>
-			<p class="touch_left_btn">
-				<!-- 이전 버튼 -->
-				<a href="#"> <img src="${pageContext.request.contextPath}/resources/img/visual_btn_left2.png" width="40px" height="40px" alt="이전 배너" />
-				</a>
-			</p>
-			<p class="touch_right_btn">
-				<!-- 다음 버튼 -->
-				<a href="#"> <img src="${pageContext.request.contextPath}/resources/img/visual_btn_right3.png" width="40px" height="40px" alt="다음 배너" />
-				</a>
-			</p>
-		</div>
-		
-	</div>
-	
+   <!--######## End banner Area ########-->
+   
+   <!-- ########## 카테고리 이미지 ########## -->
+   <div>
+   <div class= "category_img">
+         <div><img src="${pageContext.request.contextPath}/resources/img/category/cat1.png" class="img1">
+            <div class="category_text">
+               <h4>
+                  <a href="portfolio-details.html">쇼핑하기</a>
+               </h4>
+         </div></div>
+         <div><img src="${pageContext.request.contextPath}/resources/img/category/cat2.png" class="img2">
+         <div class="category_text">
+               <h4>
+                  <a href="portfolio-details.html">평수별</a>
+               </h4>
+         </div></div>
+         <div><img src="${pageContext.request.contextPath}/resources/img/category/cat3.png" class="img3">
+         <div class="category_text">
+               <h4>
+                  <a href="portfolio-details.html">공간별</a>
+               </h4>
+         </div></div>
+         <div><img src="${pageContext.request.contextPath}/resources/img/category/cat4.png" class="img4">
+         <div class="category_text">
+               <h4>
+                  <a href="portfolio-details.html">시공업체</a>
+               </h4>
+         </div></div>
+         <div><img src="${pageContext.request.contextPath}/resources/img/category/cat5.png" class="img5">
+         <div class="category_text">
+               <h4>
+                  <a href="portfolio-details.html">빠른시공상담</a>
+               </h4>
+         </div></div>
+         <div><img src="${pageContext.request.contextPath}/resources/img/category/cat6.png" class="img6">
+         <div class="category_text">
+               <h4>
+                  <a href="portfolio-details.html">질문과답변</a>
+               </h4>
+         </div></div>
+   </div>
+   </div>
 
-	<!--######## End banner Area ########-->
-
-	<!--######## Start Latest News Area ########-->
-	<section class="latest-news-area section-gap">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-12">
-					<div class="main-title text-center">
-						<h1>Latest News from all categories</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-news card">
-						<img class="card-top-img" src="${pageContext.request.contextPath}/resources/img/news/n1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h4 class="card-title">
-								<a href="#">
-									Addiction Whit Gambling
-								</a>
-							</h4>
-							<p class="card-text">It is a good idea to think of your PC as an office. It stores files, programs, pictures. This
-								can be compared to an actual.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-news card">
-						<img class="card-top-img" src="${pageContext.request.contextPath}/resources/img/news/n2.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h4 class="card-title">
-								<a href="#">
-									Headset No Longer Wired
-								</a>
-							</h4>
-							<p class="card-text">It is a good idea to think of your PC as an office. It stores files, programs, pictures. This
-								can be compared to an actual.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-news card">
-						<img class="card-top-img" src="${pageContext.request.contextPath}/resources/img/news/n3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h4 class="card-title">
-								<a href="#">
-									Life Advice Looking At Window
-								</a>
-							</h4>
-							<p class="card-text">It is a good idea to think of your PC as an office. It stores files, programs, pictures. This
-								can be compared to an actual.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--######## End Latest News Area ########-->
-
-	<!--######## Start Our Offer Area ########-->
-	<section class="our-offer-area section-gap">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 mb-30">
-							<div class="single-circle">
-								<div class="single-item">
-									<div class="progressBar progressBar--animateText" data-progress="75">
-										<svg class="progressBar-contentCircle" viewBox="0 0 200 200">
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-background" cx="100" cy="100" r="95" />
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-circle" cx="100" cy="100" r="95" />
-										</svg>
-										<span class="progressBar-percentage progressBar-percentage-count">1.5K</span>
-									</div>
-								</div>
-								<h4>Happy Clients</h4>
-							</div>
-						</div>
-
-						<div class="col-lg-6 col-md-6 mb-30">
-							<div class="single-circle">
-								<div class="single-item">
-									<div class="progressBar progressBar--animateText" data-progress="75">
-										<svg class="progressBar-contentCircle" viewBox="0 0 200 200">
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-background" cx="100" cy="100" r="95" />
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-circle" cx="100" cy="100" r="95" />
-										</svg>
-										<span class="progressBar-percentage progressBar-percentage-count">10</span>
-									</div>
-								</div>
-								<h4>Years of Experience</h4>
-							</div>
-						</div>
-
-						<div class="col-lg-6 col-md-6 mb-30">
-							<div class="single-circle">
-								<div class="single-item">
-									<div class="progressBar progressBar--animateText" data-progress="75">
-										<svg class="progressBar-contentCircle" viewBox="0 0 200 200">
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-background" cx="100" cy="100" r="95" />
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-circle" cx="100" cy="100" r="95" />
-										</svg>
-										<span class="progressBar-percentage progressBar-percentage-count">250</span>
-									</div>
-								</div>
-								<h4>Professionals</h4>
-							</div>
-						</div>
-
-						<div class="col-lg-6 col-md-6 mb-30">
-							<div class="single-circle">
-								<div class="single-item">
-									<div class="progressBar progressBar--animateText" data-progress="75">
-										<svg class="progressBar-contentCircle" viewBox="0 0 200 200">
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-background" cx="100" cy="100" r="95" />
-											<circle transform="rotate(-90, 100, 100)" class="progressBar-circle" cx="100" cy="100" r="95" />
-										</svg>
-										<span class="progressBar-percentage progressBar-percentage-count">369</span>
-									</div>
-								</div>
-								<h4>On Going Job</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="offset-lg-1 col-lg-5">
-					<div class="row justify-content-center">
-						<div class="col-lg-12">
-							<div class="main-title text-left">
-								<h1>We can be your digital Problems Solution Partner</h1>
-								<p>inappropriate behavior is often laughed off as âboys will be boys,â women face higher conduct standards especially
-									in the workplace. Thatâs why itâs crucial that, as women, our behavior on the job is beyond reproach.
-								</p>
-								<a href="#" class="primary-btn offer-btn mr-10">What we Offer</a>
-								<a href="#" class="primary-btn quote-btn">Get a free Quote</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--######## End Our Offer Area ########-->
+<!--######## Start Latest News Area ########-->
+    <section class="latest-news-area section-gap">
+         <div class="row justify-content-center">
+            <div class="col-lg-12">
+               <div class="main-title">
+                  <h1>오늘의 스토리</h1>
+                  
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-6">
+               <div class="single-news card">
+                  <img class="card-top-img" src="${pageContext.request.contextPath}/resources/img/news/c1.jpg" width="450px" height="240px" alt="Card image cap">
+                  <div class="card-body">
+                     <h4 class="card-title">
+                        <a href="#">
+                           색감톡톡! 기분 좋은 긴장감을 주는 작업실 
+                        </a>
+                     </h4>
+                     <p class="card-text">강한작가</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="single-news card">
+                  <img class="card-top-img" src="${pageContext.request.contextPath}/resources/img/news/c2.jpg" width="450px" height="240px" alt="Card image cap">
+                  <div class="card-body">
+                     <h4 class="card-title">
+                        <a href="#">
+                           정리를 잘못했던 신혼집,홈스타일링 후 쉬워졌어요~
+                        </a>
+                     </h4>
+                     <p class="card-text">kate 홈스타일링</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="single-news card">
+                  <img class="card-top-img" src="${pageContext.request.contextPath}/resources/img/news/c3.jpg" width="450px" height="240px"  alt="Card image cap">
+                  <div class="card-body">
+                     <h4 class="card-title">
+                        <a href="#">
+                           16번의 미팅끝에 원하는 대로 변신!
+                        </a>
+                     </h4>
+                     <p class="card-text">jiwooyai</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--######## End Latest News Area ########-->
 
 	<!--######## Start Recent Completed Project Area ########-->
 	<section class="recent-completed-project section-gap">
-		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-12">
-					<div class="main-title text-center">
-						<h1>Our Recent Completed Projects</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
-						</p>
+					<div class="main-title">
+						<h1>오늘의딜</h1>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="row">
+			<div id="bestbook_zone">
+   				<div id="best_bg">
+      				<ul>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today1.png" width="320px" height="320px" alt="" />
+        				<span>[Special] 베란다 유리창 창문 청소 도구! 자석창문닦이<p>45% <strong>9,500</strong></p></span></a>
+              			</li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today2.png" width="320px" height="320px" alt="" />
+              				<span>[Special] 여름의 청량함을 담은 보에나 드 모네 시리즈 (2년 품질보증)<p>45% <strong>46,000 외</strong></p></span></a>
+              			</li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today3.png" width="320px" height="320px" alt="" />
+              				<span>[Special] 샤베트 5COLOR 시어서커 선염 여름 차렵 침구세트(SS)(Q)<p>73% <strong>18,900</strong></p></span></a>
+              			</li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today4.png" width="320px" height="320px" alt="" />
+              				 <span>[Special] 너무 쉬운 집콕템 명화 그리기 -풍경&플라워<p>19% <strong>8,900 외</strong></p></span></a>
+                       </li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today8.png" width="320px" height="320px" alt="" />
+              				 <span>안심 에어컨 분해청소 (벽걸이/스탠드/천정형)<p>22% <strong>65,500</strong></p></span></a>
+                       </li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today6.png" width="320px" height="320px" alt="" />
+              				<span>[쿠폰할인] 30평대! 무풍 에어컨 AF19T7974WZRS 전국기본설치비 포함<p>27% <strong>2,000,000</strong></p></span></a>
+                       </li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today5.png" width="320px" height="320px" alt="" />
+              				<span>라탄 수초 러그 거실 카페트 5size<p>90% <strong>15,000</strong></p></span></a>
+                       </li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today8.png" width="320px" height="320px" alt="" />
+              				<span>[단독] 어라운드 원형 테이블/식탁 1000size<p>60% <strong>99,000</strong></p></span></a>
+                       </li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/today9.png" width="320px" height="320px" alt="" />
+              				<span>21년형 웨이브인버터 스탠드에어컨 SPVW17DWEG 전국기본설치<p>27% <strong>969,000</strong></p></span></a>
+                       </li>
+       	 				<li><a href="#">
+             				<img src="${pageContext.request.contextPath}/resources/img/today10.png" width="320px" height="320px" alt="" />
+             				<span>포스B25 셀프스탠딩 헤드라이트 무선 청소기(물걸레키트 증정)<p>22% <strong>198,000</strong></p></span></a>
+                       </li>
+
+      				</ul>
+      				<p class="prev_btn">
+         				<a href="#">
+         				<img src="${pageContext.request.contextPath}/resources/img/bestbook_btn_left.png" width="40px" height="50px" alt="이전으로 이동" />
+         				</a>
+      				</p>
+      				<p class="next_btn">
+         				<a href="#">
+         				<img src="${pageContext.request.contextPath}/resources/img/bestbook_btn_right.png" width="40px" height="50px" alt="다음으로 이동" />
+         				</a>
+      				</p>
+   				</div>
+ 			</div> <!-- close of bestbook_zone -->
+ 			
+ 			
+ 						<div class="row justify-content-center">
 				<div class="col-lg-12">
-					<div class="filters project-filter">
-						<ul>
-							<li class="active" data-filter=".all">All Categories</li>
-							<li data-filter=".brand">Branding</li>
-							<li data-filter=".img-man">Image Manipulation</li>
-							<li data-filter=".creative">Creative Work</li>
-							<li data-filter=".web">Web Design</li>
-							<li data-filter=".print-mat">Print Material</li>
-						</ul>
-					</div>
-					<div class="projects_inner row" id="lightgallery">
-						<div class="col-lg-4 col-sm-6 web all" data-src="${pageContext.request.contextPath}/resources/img/project/p1.jpg">
-							<div class="projects_item">
-								<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/project/p1.jpg" alt="">
-								<div class="icon">
-									<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/icon.png" alt="">
-								</div>
-							</div>
-							<div class="projects_text">
-								<h4>
-									<a href="portfolio-details.html">3D Helmet Design</a>
-								</h4>
-								<p>Client Project</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 brand all creative" data-src="${pageContext.request.contextPath}/resources/img/project/p2.jpg">
-							<div class="projects_item">
-								<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/project/p2.jpg" alt="">
-								<div class="icon">
-									<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/icon.png" alt="">
-								</div>
-							</div>
-							<div class="projects_text">
-								<h4>
-									<a href="portfolio-details.html">2D Vinyl Design</a>
-								</h4>
-								<p>Client Project</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 all" data-src="${pageContext.request.contextPath}/resources/img/project/p3.jpg">
-							<div class="projects_item">
-								<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/project/p3.jpg" alt="">
-								<div class="icon">
-									<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/icon.png" alt="">
-								</div>
-							</div>
-							<div class="projects_text">
-								<h4>
-									<a href="portfolio-details.html">Creative Poster Design</a>
-								</h4>
-								<p>Client Project</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 all print-mat" data-src="${pageContext.request.contextPath}/resources/img/project/p4.jpg">
-							<div class="projects_item">
-								<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/project/p4.jpg" alt="">
-								<div class="icon">
-									<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/icon.png" alt="">
-								</div>
-							</div>
-							<div class="projects_text">
-								<h4>
-									<a href="portfolio-details.html">Embosed Logo Design</a>
-								</h4>
-								<p>Client Project</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 brand img-man all" data-src="${pageContext.request.contextPath}/resources/img/project/p5.jpg">
-							<div class="projects_item">
-								<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/project/p5.jpg" alt="">
-								<div class="icon">
-									<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/icon.png" alt="">
-								</div>
-							</div>
-							<div class="projects_text">
-								<h4>
-									<a href="portfolio-details.html">3D Disposable Bottle</a>
-								</h4>
-								<p>Client Project</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 brand work img-man all" data-src="${pageContext.request.contextPath}/resources/img/project/p6.jpg">
-							<div class="projects_item">
-								<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/project/p6.jpg" alt="">
-								<div class="icon">
-									<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/icon.png" alt="">
-								</div>
-							</div>
-							<div class="projects_text">
-								<h4>
-									<a href="portfolio-details.html">3D Logo Design</a>
-								</h4>
-								<p>Client Project</p>
-							</div>
-						</div>
+					<div class="main-title">
+						<h1>기획전</h1>
 					</div>
 				</div>
-			</div>
-		</div>
+			</div> -->
+
+			<div id="showroom_zone">
+   				<div id="showroom">
+      				<ul>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/showroom1.png"  alt="" />
+        				<span>365일 연중무휴 득템찬스!<strong>오늘의집 특가창고 UP TO 90%</strong></span></a>
+              			</li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/showroom2.png" alt="" />
+              				<span>SNS에서 보던 캠핑템이 가득!<strong>감성 캠핑 UP TO 72%</strong></span></a>
+              			</li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/showroom3.png" alt="" />
+              				<span>무더운 여름, 보기만 해도 시원한 카페트/러그<strong>SUMMER RUG BEST 30!</strong></span></a>
+              			</li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/showroom4.png" alt="" />
+              				 <span>세라믹/대리석/원목/아일랜드식탁/주방수납장<strong>소재별 인기식탁 모아보기 ~74%</strong></span></a>
+                       </li>
+        				<li><a href="#"><img src="${pageContext.request.contextPath}/resources/img/showroom5.png" alt="" />
+              				 <span>나에게 맞는 향찾기<strong>캔들&디퓨저 추천가이드</strong></span></a>
+                       </li>
+
+      				</ul>
+      				<p class="sr_prev_btn">
+         				<a href="#">
+         				<img src="${pageContext.request.contextPath}/resources/img/bestbook_btn_left.png" width="40px" height="50px" alt="이전으로 이동" />
+         				</a>
+      				</p>
+      				<p class="sr_next_btn">
+         				<a href="#">
+         				<img src="${pageContext.request.contextPath}/resources/img/bestbook_btn_right.png" width="40px" height="50px" alt="다음으로 이동" />
+         				</a>
+      				</p>
+   				</div>
+ 			</div> <!-- close of bestbook_zone -->
+ 			
 	</section>
 	<!--######## End Recent Completed Project Area ########-->
 
@@ -481,7 +414,7 @@
 						<a href="#">Cooking Perfect Fried Rice in minutes</a>
 					</h4>
 					<p>
-						inappropriate behavior ipsum dolor sit amet, consectetur.
+						inappropriate behavior ipsum dolor sit amet, consectetur. we can
 					</p>
 					<div class="meta-bottom d-flex justify-content-between">
 						<p><span class="lnr lnr-heart"></span> 15 Likes</p>
@@ -542,11 +475,18 @@
 	<!--######## End Latest Blog Area ########-->
 
 	<!--######## start footer Area ########-->
-	<footer class="footer-area section-gap">
+	<footer class="footer-area ">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3  col-md-6">
-					<div class="single-footer-widget">
+					<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/b4.jpg" alt="">
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="single-footer-widget newsletter">
+									
+									
+				<div class="col-lg-4 col-md-12">
+						<div class="single-footer-widget">
 						<h6>Top Products</h6>
 						<ul class="footer-nav">
 							<li><a href="#">Managed Website</a></li>
@@ -556,49 +496,9 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="single-footer-widget newsletter">
-						<h6>Newsletter</h6>
-						<p>You can trust us. we only send promo offers, not a single spam.</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="form-inline">
-
-								<div class="form-group row" style="width: 100%">
-									<div class="col-lg-8 col-md-12">
-										<input name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'"
-										 required="" type="email">
-										<div style="position: absolute; left: -5000px;">
-											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-										</div>
-									</div>
-
-									<div class="col-lg-4 col-md-12">
-										<button class="nw-btn primary-btn">Subscribe<span class="lnr lnr-arrow-right"></span></button>
-									</div>
-								</div>
-								<div class="info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3  col-md-12">
-					<div class="single-footer-widget mail-chimp">
-						<h6 class="mb-20">Instragram Feed</h6>
-						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="${pageContext.request.contextPath}/resources/img/i1.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i2.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i3.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i4.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i5.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i6.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i7.jpg" alt=""></li>
-							<li><img src="${pageContext.request.contextPath}/resources/img/i8.jpg" alt=""></li>
-						</ul>
-					</div>
-				</div>
 			</div>
-
+		</div>
+	</div>
 			<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 				<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>, distributed by <a href="https://bootthemes.com/" target="_blank">BootThemes</a>
@@ -634,40 +534,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 	
 <!-- 터치슬라이드 -->
-	<script src='<%= request.getContextPath() %>/resources/js/swipe.js'></script>
-	<script type="text/javascript">
-
-	$(function() {
-		   window.mySwipe = $('#mySwipe').Swipe({
-				startSlide : 0, //초기에 첫 번째 배너가 노출됩니다.
-				auto : 3000, //3초 이후 자동으로 배너가 이동됩니다.
-				continuous : true, //배너가 반복되어 롤링됩니다.
-				callback : function(index, element) {
-					// 클래스 "active"를 포함하는 불릿 버튼을 비활성화 버튼으로 만들고
-					// "active" 클래스를 삭제한다.
-					$(".touch_bullet .active").attr("src",
-					$(".touch_bullet .active").attr("src").replace("on.png","off.png"))
-					.removeClass("active");
-					
-					$(".touch_bullet img").eq(index).attr("src",
-					$(".touch_bullet img").eq(index).attr("src").replace("off.png","on.png"))
-					.addClass("active");
-					
-				}
-			}).data('Swipe');
-
-			$(".touch_left_btn a").on("click", function() {//이전 버튼을 클릭했을 때...
-				mySwipe.prev(); //이전 배너로 이동합니다.
-				return false;
-			});
-
-			$(".touch_right_btn a").on("click", function() {//다음 버튼을 클릭했을 때...
-				mySwipe.next(); //다음 배너로 이동합니다.
-				return false;
-			});
-			
-	});
-</script>
+<script src='${pageContext.request.contextPath}/resources/js/swipe.js'></script>
+<script src='${pageContext.request.contextPath}/resources/js/jquery.bxslider.min.js'></script>
 	
 </body>
 
