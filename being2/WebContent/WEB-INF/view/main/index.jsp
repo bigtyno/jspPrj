@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -7,7 +9,7 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/fav.png">
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/logo4.png">
 	<!-- Author Meta -->
 	<meta name="author" content="colorlib">
 	<!-- Meta Description -->
@@ -17,7 +19,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Tangre Furniture</title>
+	<title>Being</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<!--
@@ -50,14 +52,14 @@
 		<div class="container main-menu">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/logo3.jpg" alt="" title="" width="75px" height="75px"/></a>
+					<a href="${pageContext.request.contextPath}/main/index.do"><img src="${pageContext.request.contextPath}/resources/img/logo3.jpg" alt="" title="" width="75px" height="75px"/></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class="menu-has-children"><a href="">커뮤니티</a>
 							<ul>
 								<li><a href="blog-home.html">홈</a></li>
-								<li><a href="blog-single.html">스토리</a></li>
+								<li><a href="${pageContext.request.contextPath}/board/list.do">스토리</a></li>
 								<li><a href="blog-single.html">노하우</a></li>
 								<li><a href="blog-single.html">이벤트</a></li>
 							</ul>
@@ -76,8 +78,15 @@
 								<li><a href="blog-single.html">간편상담신청</a></li>
 							</ul>
 						</li>
+						<u:isLogin>
+						<li class="menu-active"><a>${authUser.name}님 </a></li>
+						<li class="write"><a href="${pageContext.request.contextPath}/board/write.do">글쓰기</a></li>
+						</u:isLogin>
+						
+						<u:notLogin>
 						<li class="menu-active"><a href="${pageContext.request.contextPath}/login.do" style="padding-left: 400px;">로그인</a></li>
 						<li class="menu-active"><a href="${pageContext.request.contextPath}/join.do">회원가입</a></li>
+						</u:notLogin>
 					</ul>
 				</nav>
 				<!--######## #nav-menu-container -->
@@ -327,191 +336,33 @@
 	</section>
 	<!--######## End Recent Completed Project Area ########-->
 
-	<!--######## Start testimonial Area ########-->
-	<section class="testimonial-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="active-testimonial-carusel">
-					<div class="single-testimonial item d-flex flex-row">
-						<div class="thumb">
-							<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/elements/user1.png" alt="">
-						</div>
-						<div class="desc">
-							<p>
-								Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-								hardware.
-							</p>
-							<h4 mt-30>Mark Alviro Wiens</h4>
-							<p class="mb-0">CEO at Google</p>
-						</div>
-					</div>
-					<div class="single-testimonial item d-flex flex-row">
-						<div class="thumb">
-							<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/elements/user2.png" alt="">
-						</div>
-						<div class="desc">
-							<p>
-								Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-								hardware.
-							</p>
-							<h4 mt-30>Lina Harrington</h4>
-							<p class="mb-0">CEO at Google</p>
-						</div>
-					</div>
-					<div class="single-testimonial item d-flex flex-row">
-						<div class="thumb">
-							<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/elements/user1.png" alt="">
-						</div>
-						<div class="desc">
-							<p>
-								Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-								hardware.
-							</p>
-							<h4 mt-30>Mark Alviro Wiens</h4>
-							<p class="mb-0">CEO at Google</p>
-						</div>
-					</div>
-					<div class="single-testimonial item d-flex flex-row">
-						<div class="thumb">
-							<img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/elements/user2.png" alt="">
-						</div>
-						<div class="desc">
-							<p>
-								Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-								hardware.
-							</p>
-							<h4 mt-30>Lina Harrington</h4>
-							<p class="mb-0">CEO at Google</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--######## End testimonial Area ########-->
-
-	<!--######## Start Latest Blog Area ########-->
-	<section class="latest-blog-area section-gap">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-12">
-					<div class="main-title text-center">
-						<h1>Latest From Our Blog</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-3 col-md-6 single-blog">
-					<div class="thumb">
-						<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/b1.jpg" alt="">
-					</div>
-					<p class="date">10 Jan 2018</p>
-					<h4>
-						<a href="#">Cooking Perfect Fried Rice in minutes</a>
-					</h4>
-					<p>
-						inappropriate behavior ipsum dolor sit amet, consectetur. we can
-					</p>
-					<div class="meta-bottom d-flex justify-content-between">
-						<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-						<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 single-blog">
-					<div class="thumb">
-						<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/b2.jpg" alt="">
-					</div>
-					<p class="date">10 Jan 2018</p>
-					<h4>
-						<a href="#">Secret of making Heart Shaped eggs</a>
-					</h4>
-					<p>
-						inappropriate behavior ipsum dolor sit amet, consectetur.
-					</p>
-					<div class="meta-bottom d-flex justify-content-between">
-						<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-						<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 single-blog">
-					<div class="thumb">
-						<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/b3.jpg" alt="">
-					</div>
-					<p class="date">10 Jan 2018</p>
-					<h4>
-						<a href="#">How to check steak if it is tender or not</a>
-					</h4>
-					<p>
-						inappropriate behavior ipsum dolor sit amet, consectetur.
-					</p>
-					<div class="meta-bottom d-flex justify-content-between">
-						<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-						<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 single-blog">
-					<div class="thumb">
-						<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/b4.jpg" alt="">
-					</div>
-					<p class="date">10 Jan 2018</p>
-					<h4>
-						<a href="#">Addiction When Gambling Becomes A Problem</a>
-					</h4>
-					<p>
-						inappropriate behavior ipsum dolor sit amet, consectetur.
-					</p>
-					<div class="meta-bottom d-flex justify-content-between">
-						<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-						<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--######## End Latest Blog Area ########-->
-
 	<!--######## start footer Area ########-->
-	<footer class="footer-area ">
-		<div class="container">
+	<footer class="footer-area">
 			<div class="row">
-				<div class="col-lg-3  col-md-6">
-					<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/b4.jpg" alt="">
+				<div class="footer-test">
+					<div class="single-footer-widget mail-chimp">
+						<img src="${pageContext.request.contextPath}/resources/img/logo3.jpg" width="50px" height="50px" alt="" />
+					</div>
 				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="single-footer-widget newsletter">
-									
-									
-				<div class="col-lg-4 col-md-12">
-						<div class="single-footer-widget">
-						<h6>Top Products</h6>
+					<div class="single-footer-widget">
+						<h6>공지사항 > 1boon이 콘텐츠뷰로 새롭게 개편합니다!</h6>
 						<ul class="footer-nav">
-							<li><a href="#">Managed Website</a></li>
-							<li><a href="#">Manage Reputation</a></li>
-							<li><a href="#">Power Tools</a></li>
-							<li><a href="#">Marketing Service</a></li>
+							<li><a href="#">회사소개</a> · <a href="#">비즈니스</a> · <a href="#">검색등록</a> · <a href="#">제휴문의</a> · <a href="#">인재채용</a></li>
+							<li><a href="#">이용약관</a> · <a href="#">운영정책</a> · <a href="#">청소년보호정책</a> · <a href="#">위치기반서비스이용약관</a> · <a href="#">개인정보처리방침</a> · <a href="#">웹접근성안내</a> · <a href="#">고객센터</a></li>
 						</ul>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-			<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
-				<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>, distributed by <a href="https://bootthemes.com/" target="_blank">BootThemes</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-				<div class="footer-social d-flex align-items-center">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
+				</div>
 				</div>
 			</div>
-		</div>
+
+
+			<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+				<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>, distributed by <a href="https://bootthemes.com/" target="_blank">BootThemes</a>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
 	</footer>
 	<!--######## End footer Area ########-->
 
