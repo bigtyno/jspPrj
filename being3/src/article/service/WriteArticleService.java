@@ -23,7 +23,7 @@ public class WriteArticleService {
 			conn.setAutoCommit(false);
 
 			Article article = toArticle(req);
-			/* articleDao.insert(conn, article); */
+//			articleDao.insert(conn, article);
 			
 			Article savedArticle = articleDao.insert(conn, article);
 //			System.out.println("article insert 성공....");
@@ -53,8 +53,15 @@ public class WriteArticleService {
 
 	private Article toArticle(WriteRequest req) {
 		Date now = new Date();
-		return new Article(null, req.getWriter(), req.getType(), req.getAcreage(), req.getBudget(), req.getField(),
-				req.getSpace(), req.getTitle(), req.getContent(),
+		return new Article(null, 
+				req.getWriter(), 
+				req.getType(), 
+				req.getAcreage(), 
+				req.getBudget(), 
+				req.getField(),
+				req.getSpace(), 
+				req.getTitle(), 
+				req.getContent(),
 //				req.getProdnum(),
 				now, 0);
 	}

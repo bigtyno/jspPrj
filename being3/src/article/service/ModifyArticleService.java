@@ -3,7 +3,7 @@ package article.service;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import article.dao.ArticleContentDao;
+//import article.dao.ArticleContentDao;
 import article.dao.ArticleDao;
 import article.model.Article;
 import jdbc.JdbcUtil;
@@ -12,7 +12,7 @@ import jdbc.connection.ConnectionProvider;
 public class ModifyArticleService {
 
 	private ArticleDao articleDao = new ArticleDao();
-	private ArticleContentDao contentDao = new ArticleContentDao();
+//	private ArticleContentDao contentDao = new ArticleContentDao();
 
 	public void modify(ModifyRequest modReq) {
 		Connection conn = null;
@@ -29,9 +29,17 @@ public class ModifyArticleService {
 				throw new PermissionDeniedException();
 			}
 			articleDao.update(conn, 
-					modReq.getArticleNumber(), modReq.getTitle());
-			contentDao.update(conn, 
-					modReq.getArticleNumber(), modReq.getContent());
+					modReq.getArticleNumber(), 
+					modReq.getTitle(), 
+					modReq.getContent(),
+					modReq.getType(),
+					modReq.getAcreage(),
+					modReq.getBudget(),
+					modReq.getField(),
+					modReq.getSpace()
+					);
+//			articleDao.update(conn, 
+//					modReq.getArticleNumber(), modReq.getContent());
 			conn.commit();
 		} catch (SQLException e) {
 			JdbcUtil.rollback(conn);
