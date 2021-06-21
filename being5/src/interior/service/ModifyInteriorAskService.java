@@ -24,6 +24,7 @@ public class ModifyInteriorAskService {
 			if (interiorAsk == null) {
 				throw new InteriorAskNotFoundException();
 			}
+			
 			interiorAskDao.updateUser(conn,
 					modReq.getNum(), 
 					modReq.getGrade(),
@@ -35,6 +36,7 @@ public class ModifyInteriorAskService {
 					modReq.getAnswer()
 					);
 			conn.commit();
+			System.out.println(interiorAsk.getTel());
 		} catch (SQLException e) {
 			JdbcUtil.rollback(conn);
 			throw new RuntimeException(e);

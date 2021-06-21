@@ -50,7 +50,6 @@ public class InteriorAskDao {
 					Integer newNo = rs.getInt(1);
 					return new InteriorAsk(newNo,
 							interiorAsk.getWriter(),
-							interiorAsk.getAnswer(),
 							interiorAsk.getTitle(),
 							interiorAsk.getName(),
 							interiorAsk.getArea(),
@@ -60,9 +59,7 @@ public class InteriorAskDao {
 							interiorAsk.getDateDone(),
 							interiorAsk.getBudget(),
 							interiorAsk.getMessage(),
-							interiorAsk.getTel(),
-							interiorAsk.getGrade(),
-							interiorAsk.getContentOf()
+							interiorAsk.getTel()
 							);
 				}
 			}
@@ -175,6 +172,7 @@ public class InteriorAskDao {
 			
 		}
 	}
+	
 
 	public int updateUser(Connection conn, int no, 
 			Integer grade,
@@ -192,7 +190,6 @@ public class InteriorAskDao {
 			
 		}
 	}
-		
 		
 	public int delete(Connection conn, int no) throws SQLException {
 		try (PreparedStatement pstmt = 

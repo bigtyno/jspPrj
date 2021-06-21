@@ -21,6 +21,7 @@ public class InteriorAsk {
 	private Integer grade;
 	private String contentOf;
 	
+	//list 출력용
 	public InteriorAsk(
 			Integer num,
 			Writer writer, 
@@ -49,6 +50,17 @@ public class InteriorAsk {
 		this.tel = tel;
 	}
 	
+	
+	
+	public InteriorAsk(
+			Integer num,
+			String answer) {
+		super();
+		this.num = num;
+		this.answer=answer;
+	}
+	
+
 	public InteriorAsk(
 			Integer num,
 			Writer writer, 
@@ -84,30 +96,6 @@ public class InteriorAsk {
 		this.contentOf = contentOf;
 	}
 	
-	public InteriorAsk(
-			Integer num,
-			String answer) {
-		super();
-		this.num = num;
-		this.answer=answer;
-	}
-	
-
-	public InteriorAsk(Integer num, String title, String name, String area, String fieldof, String address,
-			String dateStart, String dateDone, String budget, String message, String tel) {
-		super();
-		this.num = num;
-		this.title = title;
-		this.name = name;
-		this.area = area;
-		this.fieldof = fieldof;
-		this.address = address;
-		this.dateStart = dateStart;
-		this.dateDone = dateDone;
-		this.budget = budget;
-		this.message = message;
-		this.tel = tel;
-	}
 
 	public Writer getWriter() {
 		return writer;
@@ -161,73 +149,109 @@ public class InteriorAsk {
 		return tel;
 	}
 
+
+
 	public String getFieldof() {
 		return fieldof;
 	}
+
+
 
 	public void setFieldof(String fieldof) {
 		this.fieldof = fieldof;
 	}
 
+
+
 	public Integer getGrade() {
 		return grade;
 	}
+
+
 
 	public void setGrade(Integer grade) {
 		this.grade = grade;
 	}
 
+
+
 	public String getContentOf() {
 		return contentOf;
 	}
+
+
 
 	public void setContentOf(String contentOf) {
 		this.contentOf = contentOf;
 	}
 
+
+
 	public void setNum(Integer num) {
 		this.num = num;
 	}
+
+
 
 	public void setWriter(Writer writer) {
 		this.writer = writer;
 	}
 
+
+
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
+
+
 
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 
 	public void setArea(String area) {
 		this.area = area;
 	}
 
+
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
 
 	public void setDateStart(String dateStart) {
 		this.dateStart = dateStart;
 	}
 
+
+
 	public void setDateDone(String dateDone) {
 		this.dateDone = dateDone;
 	}
+
+
 
 	public void setBudget(String budget) {
 		this.budget = budget;
 	}
 
+
+
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+
 
 	public void setTel(String tel) {
 		this.tel = tel;

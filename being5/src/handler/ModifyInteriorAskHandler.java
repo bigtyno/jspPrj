@@ -43,10 +43,10 @@ public class ModifyInteriorAskHandler implements CommandHandler {
 			int no = Integer.parseInt(noVal);
 			InteriorAsk interiorAsk = readService.getInteriorAsk(no);
 			User authUser = (User) req.getSession().getAttribute("authUser");
-			if (!canModify(authUser, interiorAsk)) {
-				res.sendError(HttpServletResponse.SC_FORBIDDEN);
-				return null;
-			}
+			/*
+			 * if (!canModify(authUser, interiorAsk)) {
+			 * res.sendError(HttpServletResponse.SC_FORBIDDEN); return null; }
+			 */
 			
 			
 			
@@ -75,10 +75,12 @@ public class ModifyInteriorAskHandler implements CommandHandler {
 			return null;
 		}
 	}
-	private boolean canModify(User authUser, InteriorAsk interiorAsk) {
-		String writerId = interiorAsk.getWriter().getId();
-		return authUser.getId().equals(writerId);
-	}
+	/*
+	 * private boolean canModify(User authUser, InteriorAsk interiorAsk) { String
+	 * writerId = interiorAsk.getWriter().getId(); if
+	 * (authUser.getId().equals(writerId)){ return true; } else if
+	 * (authUser.getLevel() == 1){ return true; } else { return false; } }
+	 */
 	
 	private String processSubmit(HttpServletRequest req, HttpServletResponse res)
 			throws Exception {
@@ -95,9 +97,16 @@ public class ModifyInteriorAskHandler implements CommandHandler {
 		
 		int no = Integer.parseInt(noVal);
 		
+		String grade = req.getParameter("grade");
+		int gradeInt = 0;
+
+		if (grade != null) {
+			gradeInt = Integer.parseInt(grade); 
+
+		}
 		ModifyInteriorAskRequest modReq = new ModifyInteriorAskRequest(authUser.getLevel(), no,
 				req.getParameter("answer"),
-				Integer.parseInt(req.getParameter("grade")),
+				gradeInt,
 				req.getParameter("contentOf")
 				);
 		req.setAttribute("modReq", modReq);

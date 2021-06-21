@@ -63,15 +63,16 @@
 	<td>총평</td>
 	<td><u:pre value='${interiorAsk.contentOf}'/></td>
 </tr>
+
 <tr>
 	 <td colspan="2">
 		<c:set var="pageNo" value="${empty param.pageNo ? '1' : param.pageNo}" />
-		<a href="list.do?pageNo=${pageNo}">[목록]</a>
-		<c:if test="${authUser.id == interiorAsk.writer.id}"> 
-		<a href="modify.do?no=${interiorAsk.num}">[리뷰 등록]</a>
-		<a href="delete.do?no=${interiorAsk.num}">[게시글삭제]</a> 
+			<a href="list.do?pageNo=${pageNo}">[목록]</a>
+		<c:if test="${authUser.id == interiorAsk.writer.id || authUser.level == 1}"> 
+			<a href="modify.do?no=${interiorAsk.num}">[게시글수정]</a>
+			<a href="delete.do?no=${interiorAsk.num}">[게시글삭제]</a> 
 		</c:if> 
-	</td> 
+	 </td> 
 </tr>
 </table>
 

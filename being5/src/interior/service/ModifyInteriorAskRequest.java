@@ -21,7 +21,16 @@ public class ModifyInteriorAskRequest {
 	private Integer grade;
 	private String contentOf;
 	
-public ModifyInteriorAskRequest(String userId, Integer num, String answer, String title, String name, String area,
+	public ModifyInteriorAskRequest(int level, Integer num, String answer, Integer grade , String contentOf) {
+		super();
+		this.level=level;
+		this.num=num;
+		this.answer=answer;
+		this.grade=grade;
+		this.contentOf=contentOf;
+	}
+	
+	public ModifyInteriorAskRequest(String userId, Integer num, String answer, String title, String name, String area,
 			String fieldof, String address, String dateStart, String dateDone, String budget, String message,
 			String tel, Integer grade, String contentOf) {
 		super();
@@ -42,16 +51,6 @@ public ModifyInteriorAskRequest(String userId, Integer num, String answer, Strin
 		this.contentOf = contentOf;
 	}
 
-//update 
-	public ModifyInteriorAskRequest(int level, Integer num, String answer, Integer grade , String contentOf) {
-		super();
-		this.level=level;
-		this.num=num;
-		this.answer=answer;
-		this.grade=grade;
-		this.contentOf=contentOf;
-	}
-	
 	public String getUserId() {
 		return userId;
 	}

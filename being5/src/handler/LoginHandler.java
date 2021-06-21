@@ -60,7 +60,9 @@ public class LoginHandler implements CommandHandler {
 			if(user.getLevel()==1) {
 				req.getSession().setAttribute("admin", user);
 			}
-			
+			if(user.getLevel()==2) {
+	            req.getSession().setAttribute("general", user);
+	         }
 			res.sendRedirect(req.getContextPath() + "/main/index.do");
 //			res.sendRedirect("/WEB-INF/view/login/loginSuccess.jsp");
 //			return SUCCESS;
