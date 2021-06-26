@@ -144,18 +144,6 @@
 </div>
 
 <div class="store-review">
-<%-- <tr>
-		<td>내용</td>
-		<td>평점</td>
-		<td>작성자</td>
-		<td>작성일</td>
-		<td>수정</td>
-		<u:isAdmin>
-		<td>삭제</td>
-		</u:isAdmin>
-	</tr> --%>
-	
-
 
 <c:forEach var="storeData" items="${storeData.storeReview}">
 <div class="store-review-area">

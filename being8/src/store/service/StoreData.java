@@ -11,15 +11,10 @@ import store.model.StoreReview;
 public class StoreData {
 
 	private Store store;
-//	private ArticleContent content;
-//	private StoreReview storeReview;
 	private List<StoreReview> storeReview;
-//	private StoreReviewPage storeReview;
 
-//	public ArticleData(Article article, ArticleContent content) {
 	public StoreData(Store store) {
 		this.store = store;
-//		this.content = content;
 	}
 		
 	public StoreData(Store store, List<StoreReview> storeReview) {
@@ -39,8 +34,5 @@ public class StoreData {
 		return storeReview;
 	}
 
-//	public String getContent() {
-//		return content.getContent();
-//	}
 
 }
